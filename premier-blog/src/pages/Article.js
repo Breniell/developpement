@@ -1,29 +1,25 @@
-import { useParams  } from "react-router-dom";
-import articles from './articleContent'
+import React from 'react';
+import { useParams } from "react-router-dom";
+import articles from './ArticleContent';
 import NotFoundPage from "./NotFoundPage";
-function Article () {
-    
-    const {articleId} = useParams();
+import './Article.css';
+
+function Article() {
+    const { articleId } = useParams();
     const article = articles.find(article => article.name === articleId);
-    
-    if(!article){
-        return <NotFoundPage/>
+
+    if (!article) {
+        return <NotFoundPage />;
     }
 
-    
     return (
-        <>
-
-        <h1> {article.title} </h1>
-        {article.content.map((contenu,i) => (
-            <p key={i}>{contenu}</p>
-            
+        <div className="article-container">
+            <h1>{article.title}</h1>
+            {article.content.map((content, index) => (
+                <p key={index}>{content}</p>
             ))}
-
-        </>
-     
+        </div>
     );
-  }
-  
-  export default Article;
-  
+}
+
+export default Article;

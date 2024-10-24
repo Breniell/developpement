@@ -1,0 +1,28 @@
+/* Footer.css */
+footer {
+    text-align: center;
+    background-color: #333;
+    color: white;
+    padding: 1.5rem 0;
+    margin-top: auto;
+}
+
+.social-links {
+    list-style-type: none;
+    padding: 0;
+}
+
+.social-links li {
+    display: inline-block;
+    margin: 0 1rem;
+}
+
+.social-links li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.social-links li a:hover {
+    color: #00cfff;
+}

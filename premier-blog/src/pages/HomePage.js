@@ -1,18 +1,23 @@
+import React from 'react';
+import ArticleList from '../components/ArticlesList';
+import articles from './ArticleContent';
+import './HomePage.css';
 
 function HomePage() {
-    return (
+  return (
+    <>
+      <section className="hero">
+        <h1>Welcome to My Futuristic Blog</h1>
+        <p>Your go-to place for insightful articles on technology, lifestyle, and more!</p>
+        <button className="cta-button">Explore Now</button>
+      </section>
 
-        <>
+      <section className="recent-articles">
+        <h2>Recent Articles</h2>
+        <ArticleList articles={articles.slice(0, 3)} />
+      </section>
+    </>
+  );
+}
 
-        <h1> This is the Homepage</h1>
-        <p>text 1</p>
-        <p>text 2</p>
-        <p>text 3</p>
-
-        </>
-     
-    );
-  }
-  
-  export default HomePage;
-  
+export default HomePage;
