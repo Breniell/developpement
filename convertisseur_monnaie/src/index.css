@@ -1,0 +1,112 @@
+/* Global Styles */
+body {
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(135deg, #f4f4f9 25%, #e0e0e0 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.app-container {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+  max-width: 420px;
+  width: 100%;
+  text-align: center;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.title {
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+  color: #333;
+  letter-spacing: 1px;
+}
+
+.converter-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.currency-input {
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  transition: box-shadow 0.3s ease;
+}
+
+.currency-input:focus {
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.2);
+  border-color: #007bff;
+}
+
+.select-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.select-label {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #555;
+}
+
+.currency-select {
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  background-color: #f9f9f9;
+  transition: box-shadow 0.3s ease;
+}
+
+.currency-select:focus {
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.2);
+  border-color: #007bff;
+}
+
+.result {
+  margin-top: 1rem;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #28a745;
+  transition: opacity 0.3s ease;
+}
+
+.loader {
+  border: 5px solid #f3f3f3;
+  border-top: 5px solid #007bff;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  animation: spin 0.8s linear infinite;
+  margin: 0 auto;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Hover Effects */
+.currency-input:hover, .currency-select:hover {
+  border-color: #007bff;
+}
